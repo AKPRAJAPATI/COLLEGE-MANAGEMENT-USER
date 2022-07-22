@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ImageFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:background="@color/whitebck"
+
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="15 August"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/augustRel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/august15Recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="3dp" />
+            </RelativeLayout>
+
+           <RelativeLayout
+               android:background="@color/whitebck"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="3dp"
+                   android:layout_marginBottom="3dp"
+                   android:gravity="center"
+                   android:text="26 January"
+                   android:textSize="22sp"
+                   android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/januaryRel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/january26Recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@color/whitebck"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:text="Other"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/otherRel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/otherRecyclerview"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</FrameLayout>

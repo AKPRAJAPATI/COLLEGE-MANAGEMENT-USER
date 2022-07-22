@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.HomeFragment">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+
+        android:id="@+id/shimmerLayoutImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:animationCache="true"
+        app:shimmer_repeat_delay="1000"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="linear">
+
+        <include layout="@layout/z_shimmer_sliders" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ScrollView
+        android:id="@+id/my_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone"
+         >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:src="@drawable/first"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_error_image="@color/black"
+                app:iss_period="1000"
+
+                app:iss_placeholder="@drawable/image" />
+            <!--below is the view for our shimmer-->
+
+            <!--College Name-->
+            <TextView
+                android:id="@+id/collegeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ellipsize="marquee"
+
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+            <!--                        this is our main layout this is my ui and see our user in this layout-->
+
+            <TextView
+
+                android:id="@+id/collegeDetailTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="This is my college information"
+                android:textSize="22sp" />
+            <!--                        this is our course layout -->
+
+            <com.denzcoskun.imageslider.ImageSlider
+
+                android:id="@+id/imageSlider_teachers"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/first"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_error_image="@color/black"
+                app:iss_period="1000"
+
+                app:iss_placeholder="@drawable/image" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="270dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#676666">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="Courses"
+                        android:textColor="@color/white"
+                        android:textSize="37sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/courseRecyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <!--                        Address-->
+            <TextView
+
+                android:id="@+id/CONTECT_INFO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Contect Info"
+                android:textColor="#2196F3"
+                android:textSize="37sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/collegeAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="College Address"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="State"
+
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Pincode"
+
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Email"
+
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Phone Number"
+
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+            <!--Map-->
+            <ImageView
+
+                android:id="@+id/mapImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/map" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="#676666"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bottomCollegeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+
+                    android:singleLine="true"
+                    android:text="Gagan college  of management agara road aligarh"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="State"
+                            android:textColor="@color/teal_200"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bottomState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="Uttar Pradesh"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Pincode"
+                            android:textColor="@color/teal_200"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bottmPincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="202170"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Email"
+                            android:textColor="@color/teal_200"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bottomGmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="abc@gmail.com"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Contect"
+                            android:textColor="@color/teal_200"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/bottomContect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="191919191"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/admissionOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Admission Open"
+                    android:textColor="@color/teal_200"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

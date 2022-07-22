@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/videoLecture"
+        android:title="Video Lectures"
+        android:icon="@drawable/video"/>
+    <item
+        android:id="@+id/pdf"
+        android:title="eBooks"
+       android:icon="@drawable/ebookakk" />
+    <item
+        android:id="@+id/websites"
+        android:title="Websites"
+        android:icon="@drawable/websites"/>
+    <item
+        android:id="@+id/share"
+        android:title="Share this app"
+        android:icon="@drawable/share"/>
+    <item
+        android:id="@+id/rate_us"
+        android:title="Rate us"
+        android:icon="@drawable/rating"/>
+    <item
+        android:id="@+id/developerProfile"
+        android:title="Developer"
+        android:icon="@drawable/programmer"/>
+     <item
+        android:id="@+id/logout"
+        android:title="Log Out"
+        android:icon="@drawable/ic_baseline_login_24"/>
+
+
+</menu>
